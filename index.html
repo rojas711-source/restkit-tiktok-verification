@@ -4,57 +4,112 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RestKit TikTok Uploader</title>
-    <style>
-      body {
-        margin: 0;
-        background: #f5f4ef;
-        color: #22312d;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-      main {
-        width: min(820px, calc(100% - 32px));
-        margin: 48px auto;
-        padding: 28px;
-        background: #fff;
-        border: 1px solid #d9ded7;
-        border-radius: 8px;
-      }
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(32px, 6vw, 56px);
-        line-height: 1;
-      }
-      p {
-        max-width: 660px;
-        line-height: 1.6;
-      }
-      a {
-        color: #426b5f;
-        font-weight: 800;
-      }
-      nav {
-        display: flex;
-        gap: 16px;
-        margin-top: 28px;
-      }
-    </style>
+    <link rel="stylesheet" href="restkit.css">
   </head>
   <body>
-    <main>
-      <h1>RestKit TikTok Uploader</h1>
-      <p>
-        RestKit uses a private owner workflow to prepare product videos and upload approved
-        clips to TikTok drafts through TikTok's Content Posting API. The store owner reviews
-        and publishes drafts manually inside TikTok.
-      </p>
-      <p>
-        RestKit sells practical sleep, travel, and recovery products through Shopify at
-        <a href="https://restkit.myshopify.com">restkit.myshopify.com</a>.
-      </p>
-      <nav>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="RestKit home">
+        <span class="brand-mark">RK</span>
+        <span>
+          <strong>RestKit</strong>
+          <small>Sleep, travel, recovery</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="RestKit TikTok pages">
+        <a href="index.html">Overview</a>
         <a href="terms.html">Terms</a>
         <a href="privacy.html">Privacy</a>
       </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-visual" role="img" aria-label="RestKit sleep, travel, and recovery kit arranged for a calm night routine">
+          <span class="sunrise"></span>
+          <span class="case"></span>
+          <span class="mask"></span>
+          <span class="pod"></span>
+          <span class="mat"></span>
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">RestKit TikTok Uploader</p>
+          <h1>Product videos for calmer sleep routines.</h1>
+          <p>
+            RestKit uses an owner-operated workflow to prepare approved product clips
+            and upload them to TikTok drafts. The owner reviews each draft manually
+            before anything is published.
+          </p>
+          <div class="actions">
+            <a class="button" href="https://restkit.myshopify.com">Shop RestKit</a>
+            <a class="ghost" href="privacy.html">Privacy</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Featured routine</p>
+            <h2>Simple products, clear use cases.</h2>
+          </div>
+          <span class="pill">Draft upload workflow</span>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-visual visual-mask" role="img" aria-label="Weighted eye mask product visual">
+              <span></span>
+            </div>
+            <div>
+              <h3>Weighted Eye Mask</h3>
+              <p>A soft sleep accessory for naps, hotel rooms, and brighter bedrooms.</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-visual visual-pillow" role="img" aria-label="Cooling pillowcase product visual">
+              <span></span>
+            </div>
+            <div>
+              <h3>Cooling Pillowcase</h3>
+              <p>A practical bedding upgrade for customers building a better night routine.</p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-visual visual-pod" role="img" aria-label="White noise pod product visual">
+              <span></span>
+            </div>
+            <div>
+              <h3>White Noise Pod</h3>
+              <p>Compact bedside audio for calmer sleep environments and travel kits.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>How TikTok is used</h3>
+            <p>
+              Login Kit lets the store owner authorize RestKit. Content Posting API
+              is used for <strong>video.upload</strong>, creating TikTok drafts for
+              manual review and publishing.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Data boundary</h3>
+            <p>
+              RestKit does not send Shopify customer order data to TikTok. The uploader
+              only uses selected video files, captions, authorization responses, and
+              related upload status.
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <span>RestKit TikTok Uploader</span>
+      <span>Owner-reviewed draft publishing</span>
+    </footer>
   </body>
 </html>
